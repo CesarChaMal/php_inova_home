@@ -1,0 +1,508 @@
+    /********************************
+    	    Primoris Theme
+    ********************************/
+    /********** -cl-header **********
+	class: Header
+    	Header bar.
+	*/
+	.primoris-cl-header {
+		color: white;
+		font-family: Verdana;
+		font-size: 8pt;
+		background-image: url(primoris/header.jpg);
+	}
+    /********** -cl-on-month **********
+	class: Non-Selected day class of currently selected month
+	*/
+	.primoris-cl-on-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-on-month-lit **********
+	class: Selected day class of currently selected month
+	*/
+	.primoris-cl-on-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: #99CDFF;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-off-month **********
+	class: Non Selected Month
+    	Class of the days that appear on the current month's
+        calendar that are from the next or previous month.
+	*/
+	.primoris-cl-off-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: gray;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-off-month-lit **********
+	class: Selected date of next or previous month.
+	*/
+	.primoris-cl-off-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: silver;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-body **********
+	class: body
+    	Class of the frame of the actual calendar.
+	*/
+	.primoris-cl-body {
+		border: 1px solid black;
+		position: absolute;
+	}
+    /********** -cl-year **********
+	class: Year
+    	Class of a cell in the year selection bar.
+	*/
+	.primoris-cl-year {
+		border: 1px solid black;
+		background-color:white;
+		border-collapse: collapse;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-year-lit **********
+	class: Selected Year
+    	Class of a cell in the year selection bar that
+		is currently selected.
+	*/
+	.primoris-cl-year-lit {
+		background-color: silver;
+		border: 1px solid black;
+		border-collapse: collapse;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-day **********
+	class: Day
+    	Class of an individual cell in the day header
+        bar.
+	*/
+	.primoris-cl-day {
+		text-align: center;
+		font-size: 7pt;
+		font-family: Verdana;
+		padding-left: 7px;
+		padding-right: 7px;
+		background-image: url(primoris/days.jpg);
+	}
+    /********** -cl-days **********
+	class: Days header bar
+    	Class of the row of the day header bar.
+	*/
+	.primoris-cl-days 
+	{
+		background-image: url(primoris/days.jpg);
+	}
+    /********** -tgt **********
+	class: Target Date
+		Class of the date currently selected in the DateClick object
+        (usually what's in the text field associated with it).
+	*/
+	.primoris-tgt {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: #FE7646;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -today **********
+	class: Today's Date
+		Class of the current day as reported by the operating system.
+	*/
+	.primoris-today {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: transparent;
+		color: maroon;
+        text-decoration: underline;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -old **********
+	class: Old (INVALID) Date
+		Class of a date that has already passed and is outside of the
+		range of values that can be selected according to the INVALID
+		option.
+	*/
+	.primoris-old 
+	{
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: White;
+		color: silver;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    
+    
+    
+    /********************************
+    		Basic Theme
+    ********************************/
+    /********** -cl-header **********
+	class: Header
+    	Header bar.
+	*/
+	.basic-cl-header {
+		color: white;
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: blue;
+	}
+    /********** -cl-on-month **********
+	class: Non-Selected day class of currently selected month
+	*/
+	.basic-cl-on-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: transparent;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-on-month-lit **********
+	class: Selected day class of currently selected month
+	*/
+	.basic-cl-on-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: blue;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-off-month **********
+	class: Non Selected Month
+    	Class of the days that appear on the current month's
+        calendar that are from the next or previous month.
+	*/
+	.basic-cl-off-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: gray;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-off-month-lit **********
+	class: Selected date of next or previous month.
+	*/
+	.basic-cl-off-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: silver;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-body **********
+	class: body
+    	Class of the frame of the actual calendar.
+	*/
+	.basic-cl-body {
+		border: 1px solid black;
+		position: absolute;
+	}
+    /********** -cl-year **********
+	class: Year
+    	Class of a cell in the year selection bar.
+	*/
+	.basic-cl-year {
+		border: 1px solid black;
+		background-color:white;
+		border-collapse: collapse;
+		border-spacing: 0px;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-year-lit **********
+	class: Selected Year
+		Class of the selected year.
+	*/
+	.basic-cl-year-lit {
+		background-color: silver;
+		border: 1px solid black;
+		border-collapse: collapse;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-day **********
+	class: Target Date
+		Class of the day header column.
+	*/
+	.basic-cl-day {
+		text-align: center;
+		font-size: 7pt;
+		font-family: Verdana;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+    /********** -tgt **********
+	class: Target Date
+		Class of the date currently selected in the DateClick object
+        (usually what's in the text field associated with it).
+	*/
+	.basic-tgt {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: #FE7646;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -today **********
+	class: Today's Date
+		Class of the current day as reported by the operating system.
+	*/
+	.basic-today {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: transparent;
+		color: maroon;
+        text-decoration: underline;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -old **********
+	class: Old (INVALID) Date
+		Class of a date that has already passed and is outside of the
+		range of values that can be selected according to the INVALID
+		option.
+	*/
+	.basic-old 
+	{
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: White;
+		color: silver;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+
+
+
+
+
+    /********************************
+    	    Bluesteel Theme
+    ********************************/
+    /********** -cl-header **********
+	class: Header
+    	Header bar.
+	*/
+	.bluesteel-header-row 
+	{
+		font-family: Verdana;
+		font-weight: bold;
+		color: white;
+		font-size: 6pt;
+	}
+    /********** -cl-on-month **********
+	class: Non-Selected day class of currently selected month
+	*/
+	.bluesteel-cl-on-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -cl-on-month-lit **********
+	class: Selected day class of currently selected month
+	*/
+	.bluesteel-cl-on-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+		background-image: url(bluesteel/header.jpg);
+		background-position: right top;
+	}
+    /********** -cl-off-month **********
+	class: Non Selected Month
+    	Class of the days that appear on the current month's
+        calendar that are from the next or previous month.
+	*/
+	.bluesteel-cl-off-month {
+		font-family: Verdana;
+		font-size: 8pt;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+		background-image:url(bluesteel/bg.jpg);
+	}
+    /********** -cl-off-month-lit **********
+	class: Selected date of next or previous month.
+	*/
+	.bluesteel-cl-off-month-lit {
+		font-family: Verdana;
+		font-size: 8pt;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+		background-image:url(bluesteel/bg.jpg);
+	}
+    /********** -cl-body **********
+	class: body
+    	Class of the frame of the actual calendar.
+	*/
+	.bluesteel-cl-body {
+		border: 1px solid black;
+		position: absolute;
+		background-image:url(bluesteel/header.jpg);
+	}
+    /********** -cl-year **********
+	class: Year
+    	Class of a cell in the year selection bar.
+	*/
+	.bluesteel-cl-year {
+		border: 1px solid black;
+		border-collapse: collapse;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-year-lit **********
+	class: Selected Year
+		Class of the selected year.
+	*/
+	.bluesteel-cl-year-lit {
+		border: 1px solid black;
+		border-collapse: collapse;
+		font-size: 7pt;
+		font-family: Verdana;
+		text-align: center;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+    /********** -cl-day **********
+	class: Target Date
+		Class of the day header column.
+	*/
+	.bluesteel-cl-day {
+		text-align: center;
+		font-size: 7pt;
+		font-family: Verdana;
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+    /********** -cl-days **********
+	class: Days header bar
+    	Class of the row of the day header bar.
+	*/
+	.bluesteel-cl-days 
+	{
+		background-image:url(bluesteel/bg.jpg);
+		background-position: left bottom;
+	}
+    /********** -tgt **********
+	class: Target Date
+		Class of the date currently selected in the DateClick object
+        (usually what's in the text field associated with it).
+	*/
+	.bluesteel-tgt {
+		font-family: Verdana;
+		font-size: 8pt;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+		background-image: url(bluesteel/header.jpg);
+		background-position: right top;
+	}
+    /********** -old **********
+	class: Old (INVALID) Date
+		Class of a date that has already passed and is outside of the
+		range of values that can be selected according to the INVALID
+		option.
+	*/
+	.bluesteel-old 
+	{
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: White;
+		color: silver;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+    /********** -today **********
+	class: Today's Date
+		Class of the current day as reported by the operating system.
+	*/
+	.bluesteel-today {
+		font-family: Verdana;
+		font-size: 8pt;
+		background-color: transparent;
+		color: maroon;
+        text-decoration: underline;
+		text-align: center;
+		border-top: 1px solid silver;
+		border-left: 1px solid silver;
+	}
+
+	/* Not related to the calendar functioning. The following style rules
+	are purely for the supporting DateClick documentation */
+	.links 
+	{
+		color: #0082D6;
+		font-family: Verdana;
+		font-size: 8pt;
+	}
+	.subdued 
+	{
+		color: #CDCDCD;
+	}
+	.copyright 
+	{
+		color: Gray;
+		font-family: Verdana;
+		font-size: 7pt;	}

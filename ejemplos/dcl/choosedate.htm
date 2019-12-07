@@ -1,0 +1,619 @@
+<html>
+	<head>
+		<style> PRE { font-size: 8pt; }
+	TD { font-family: Verdana; font-size: 8pt; }
+	</style>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<link type="text/css" rel="stylesheet" href="calendar.css">
+	</head>
+	<body background=images/primebackground.jpg bgproperties=fixed>
+<div align="center"><img src="images/dateclicklogo.jpg"></div>
+<div align="center" class="subdued">
+<a class="links" href="index.htm">Overview</a> | 
+<a class="links" href="choosedate.htm">Manual</a> |
+<a class="links" href="faqs.htm">FAQ</a> |
+<a class="links" href="http://www.primorissoftware.com">Primoris</a>
+&nbsp;
+</div>
+		<P>
+		</P>
+<P>&nbsp;</P>
+		<P><FONT face="Verdana" size="1">
+<TABLE id=Table4 cellSpacing=1 cellPadding=1 width=300 align=center border=0 style="BORDER-RIGHT: gray thin solid; BORDER-TOP: gray thin solid; BORDER-LEFT: gray thin solid; BORDER-BOTTOM: gray thin solid">
+  <TR>
+    <TD><a><FONT size=1><a href="#overview">Overview</a></FONT></a></TD></TR>
+  <TR>
+    <TD><a><FONT size=1><a href="#difference">Difference between Standard and Pro/Dev</a></FONT></a></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#adding">Adding DateClick to Your Web Page</a></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#languages">Different Languages and Date Formats</a></FONT></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 13px"><FONT size=1><a href="#configuring">Configuring Day and Month 
+      Displays</a></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#starting">Starting Day of the Week</a></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#string">The Configuration String</a></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#files">Files Included with DateClick</a></FONT></TD></TR>
+  <TR>
+    <TD><FONT size=1><a href="#classes">List of CSS Classes</a></FONT></TD></TR></TABLE> </FONT></P>
+		<P><FONT face="Verdana" size="1"></FONT>&nbsp;</P>
+<P><FONT face=Verdana size=1></FONT>&nbsp;</P>
+<P><a name="overview"><FONT face=Verdana size=1><STRONG>Overview</STRONG></FONT></a></P>
+		<P><FONT face="Verdana" size="1">Date fields on web input forms have long been a 
+				stumbling block for users and developers alike.&nbsp; Users, who as we know 
+				come in all different shapes and sizes, are used to their own particular date 
+				formatting.&nbsp; When entering data on the web, most find themselves having to 
+				choose between a dash or a slash,&nbsp;european or american formatting, 
+				etc.,&nbsp;many times with frustrating results.&nbsp; If you are developer 
+				giving a demonstration of your web application, or a merchant trying to make a 
+				sale, frustrating the user can cost you well-deserved sales.&nbsp; </FONT>
+		</P>
+		<P><FONT face="Verdana" size="1">On the flip-side, developers then must solve their own 
+				problems with date input fields.&nbsp; Usually you have to put these results 
+				into a database.&nbsp; This means it has to be in a specific format.&nbsp; What 
+				if it's an invalid date?&nbsp; Even with your own validation routines, there is 
+				too much potential to raise an error.&nbsp; Most software developers have long 
+				ago learned to add a pop-up calendar into their form to facilitate date 
+				picking, but until now there has been no comparable input control for web 
+				pages.&nbsp;</FONT></P>
+		<P><FONT face="Verdana" size="1">DateClick is a "drop-in" web component written 
+				entirely in client-side Javascript.&nbsp; With no unnecessary server-side code, 
+				the DateClick pop-up calendar can be called from any type of web page--HTML, 
+				ASP, ASP.NET,&nbsp;PHP, JSP, etc..&nbsp; Any page that will be viewed in a 
+				browser will load DateClick.&nbsp; </FONT>
+		</P>
+		<P><FONT face="Verdana" size="1">The DateClick icon will normally reside next to one 
+				or more date entry fields on your web entry form.&nbsp; The calendar can 
+				be configured to appear either when the icon detects a click event or 
+				a mouse-over&nbsp;(Pro version).&nbsp; Without any round-trips back to the server, the calendar appears 
+				using cross-browser compatible DHTML.&nbsp; The appearance of the calendar is 
+				highly configurable with CSS and design-time options that are passed to the 
+				calendar upon creation.&nbsp;&nbsp;Configuration options such as non-English 
+				display, begin on Monday, international date formatting, custom delimiters, and 
+				many more are available.&nbsp; </FONT>
+		</P>
+		<P><FONT face="Verdana" size="1">DateClick has been designed to allow the selection of 
+				any date with as few clicks as possible, and was designed from the ground up 
+				with the most versatile navigation of any comparable product.&nbsp; <I>A date as 
+				far away as 30 or 40 years can be chosen with a fraction of the amount of 
+				clicking</I> on traditional GUI calendars&nbsp;thanks to the year fly-out.&nbsp; 
+				Any month of the year is one click away on the month fly-out in addition to the 
+				more traditional "next month", "previous month" navigaton.</FONT></P>
+		<P><FONT face="Verdana" size="1">Once a date has been selected, it is passed back to 
+				the input field of your choice in the format you specify.&nbsp; Thus a normally 
+				frustrating and time consuming operation can be completed in as little as a 
+				single click!&nbsp; </FONT>
+		</P>
+		<P><FONT face="Verdana" size="1"></FONT>&nbsp;</P>
+
+		<P><a name="difference"><FONT face="Verdana" size="1"><STRONG>What's the difference between Standard (free) and Pro/Developer?</STRONG></FONT></a></P>
+		<P><FONT face="Verdana" size="1">DateClick is geared towards developers of complicated user
+			interfaces and web pages, but we believe the casual user should be able to have
+			powerful user interface design as well.  DateClick Standard is <i>free</i> for
+			non-commercial use.  This includes blogs, non-profits, sites run as a hobby,
+			open source, etc..  For the professional user, DateClick Pro and Developer
+			include <i>many</i> powerful enhancements (see the list of options below) and
+			can be licensed for use on pages that generate sales and ad revenue.  The
+			Developer version can even be included in your own distributable web applications
+			royalty free!  See <a href="http://www.primorissoftware.com/purchase.asp">the Primoris Software website</a>
+			for more details on the commercial versions.
+		</FONT></P>
+
+		<P><a name="adding"><FONT face="Verdana" size="1"><STRONG>Adding DateClick to Your Web 
+Page</STRONG></FONT></a></P>
+		<P><FONT face="Verdana" size="1">DateClick is an object-oriented JavaScript component designed to 
+be added to your page&nbsp;with minimal effort.&nbsp; Adding one or more 
+pop-up calendars to your page is as easy as creating the DateClick object and calling 
+the method to write that object into the browser's window.&nbsp; Even if you 
+are not familiar with Javascript syntax, you can copy and paste the examples into 
+your own design with no special programming experience!&nbsp; A 
+				summary of adding the code to your page follows:</FONT></P>
+		<P><FONT face="Verdana" size="1">1. Add a 
+reference to the script file that contains the object definition in the 
+&lt;head&gt; tags of your web page.&nbsp; "<STRONG>&lt;script 
+language='javascript' src=          
+				           
+				 'choosedate.js'&gt;&lt;/script&gt;</STRONG>".  Also add a CSS
+				 link to the style page to define the look of the calendar.
+				 <strong>&lt;link type="text/css" rel="stylesheet" href="calendar.css"&gt;</strong><BR>
+				2. Create a variable and set it to a new instance of the object. 
+				Notice&nbsp;the string in quotation marks that is passed to the method.&nbsp; 
+				This is called the <STRONG>configuration string, </STRONG>and is how many internal 
+				settings of the calendar are set.&nbsp; In this case, the FIELD parameter is 
+				specified.&nbsp; Although this is not required to add the calendar to the page, 
+				it <EM>is </EM>required if you want to pass the chosen date value into a form field.&nbsp; The field name 
+				should be the full document path to the field, including the form name.<BR><STRONG>var&nbsp;cal1 = new 
+calendar("FIELD:document.frm.datBegin;");</STRONG>&nbsp; This assumes that you 
+have a form on your page named "frm" and an input field named datBegin.&nbsp; If 
+this is not the case, add the code to include this on your page, or change the 
+name of the form to match your 
+				existing  set up.<BR>
+				3. Call the writeCalendar() method of the calendar instance you created in the 
+				location you want the icon to appear (this is using the default "document flow" 
+				positioning--"absolute" positioning is also available).&nbsp;
+				<BR><STRONG>cal1.writeCalendar();</STRONG>
+				<BR>
+				4. The supporting&nbsp;.CSS file (usually calendar.css) and .JS file 
+				(choosedate.js) should be in the same directory as the page that DateClick has 
+				been added to.&nbsp; The graphic files should by default be in a subdirectory 
+				called "basic".&nbsp; </FONT>
+		</P>
+		<P><FONT face="Verdana" size="1"><STRONG>Pro: </STRONG>In the professional version, you 
+				can specify the image directory and class name prefix.&nbsp; With this feature, 
+				you can radically change the look of the DateClick popup calendar.&nbsp; By 
+				default, this will be "basic", but by sending a "DIR" parameter in the 
+				configuration string you can set this on a per-object basis.&nbsp; This is 
+				especially useful if you need to have more than one style of calendar on one 
+				page.&nbsp;</FONT></P>
+		<P>&nbsp;</P>
+		<P><a name="languages"><FONT face="Verdana" size="1"><STRONG>Different Languages and Date 
+Formats</STRONG></FONT></a></P>
+		<P><FONT face="Verdana" size="1"> DateClick can be set to return 
+				dates in 3 different formats.&nbsp; The default format is m/d/yyyy.&nbsp; By 
+				setting the FORMAT property in the configuration string to 1 this will be in 
+				d/m/yyyy format, and by setting it to 2 DateClick will return values in 
+				yyyy/m/d format. </FONT>
+		</P>
+		<P><FONT size="1"><FONT face="Verdana">Although DateClick was programmed in America in English, the 
+calendar can be displayed in almost any format in 
+					almost any language.&nbsp; You can change the format to the 3 formats listed above,&nbsp;and you 
+					can also specify whether leading 0's should be added and what delimiter should 
+					be used between the month, day, and year.&nbsp; This will yield almost any 
+					conceivable date format, such as yyyy-mm-dd, mm.dd.yyyy, dd-mm-yyyy, 
+					etc..&nbsp; </FONT></FONT>
+		</P>
+		<P><FONT size="1"><FONT face="Verdana"></FONT></FONT>&nbsp;</P>
+		<P><a name="configuring"><FONT size="1"><FONT face="Verdana"><STRONG>Configuring 
+Day and Month Displays</STRONG></FONT></FONT></a></P>
+		<P><FONT size="1"><FONT face="Verdana"> The way DateClick displays the names 
+					of the months and days is also configurable.&nbsp; Instead of display the default 
+					of S, M, T,&nbsp;etc. for the days, you can configure it to show Sun, Mon, 
+					Tue, ..., or Sonntag, Montag, Dienstag,... This is accomplished by overriding 
+					the default ary_days property.&nbsp; Do this in Javascript directly after 
+					creating the calendar object.&nbsp; An example would be: </FONT></FONT>
+					<blockquote>
+				<pre>&lt;script language=javascript&gt; <BR>	var myCal = new calendar("FIELD:document.formName.BeginDate;"); <BR>	myCal.aryDays = Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"); <BR> myCal.aryMonths = Array("Janvier", "Février",
+		"Mars", "Avril", "Peut", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre",
+		"Décembre");
+myCal.writeCalendar();
+&lt;/script&gt;
+</pre>
+			</blockquote>
+		<P>
+			<FONT size="1"><FONT face="Verdana">The above example will create a calendar that will 
+					display German dates in the&nbsp;day header&nbsp;row and French months. Notice 
+					that when the myCal variable is declared, a string is passed that gives the 
+					FIELD name.&nbsp; This is the only required configuration parameter.&nbsp; It 
+					tells DateClick what input field to pass the date back to. </FONT></FONT>
+		</P>
+		<P><FONT face="Verdana" size="1"></FONT>&nbsp;</P>
+		<P><a name="starting"><FONT face="Verdana" size="1"><STRONG>Starting Day of the 
+Week</STRONG></FONT></a></P>
+		<P><FONT face="Verdana" size="1"><STRONG>Pro: </STRONG>The DateClick calendar defaults 
+				to a week beginning with Sunday, however the Professional version and above can 
+				be configured to begin the week display on monday by passing a BEGINONMONDAY 
+				value of 1 in the configuration string.</FONT></P>
+<P><FONT face=Verdana size=1></FONT>&nbsp;</P>
+<P><FONT face=Verdana size=1><a name="string"><STRONG>The Configuration 
+String</STRONG></a></FONT></P>
+<P><FONT face=Verdana size=1>When the DateClick calendar is created, a string is 
+passed in the constructor to configure various options.&nbsp; The FIELD option 
+is required--this tells DateClick which form field it should pass the selected 
+date value to.&nbsp; See the configuration string passed in the following 
+example:<BR></FONT></P>
+					<blockquote>
+				<pre>&lt;form name="formName"&gt;<BR>	&lt;input type="text" name="DateOfBirth"&gt;<BR><BR><BR><BR><BR><BR>	&lt;script language= javascript&gt; <BR>		var myCal = new calendar("FIELD:document.formName.DateOfBirth;");
+		myCal.writeCalendar();
+	&lt;/script&gt;<BR>&lt;/form&gt;
+</pre></blockquote>
+<P><FONT face=Verdana size=1>In this example, a DateClick object is 
+created called myCal.&nbsp; It is created by instantiating a calendar object (This 
+is the name of the DateClick calendar).&nbsp; In the parenthesis after calendar, 
+a string is passed--that is a "string" of characters enclosed in 
+quotation marks.&nbsp; The options in a configuration string are passed in exactly 
+the same way as CSS options.&nbsp; There is a&nbsp;variable name followed by 
+a colon, then the value of the field and a semi-colon.&nbsp; In this case, 
+the variable is "FIELD", and the value is "document.formName.DateOfBirth".&nbsp; 
+document is the Javascript reference to the web page you are adding DateClick 
+to--this will always be just document.&nbsp;&nbsp;formName is the name of the form that encloses 
+the DateOfBirth field, which is a text type of an HTML input.</FONT></P>
+<P><FONT face=Verdana size=1><STRONG>Pro: </STRONG>The Professional and 
+Developer editions of DateClick have some very flexible options that can control 
+how and when the DHTML pop-up calendar is displayed.&nbsp; A full reference can 
+be found in the table below.</FONT></P>
+<P>
+<TABLE id=Table1 cellSpacing=1 cellPadding=3 width="80%" align=center 
+  border=1>
+  <TR>
+    <TD vAlign=top colSpan=3>Options available in the Standard, Pro, and 
+      Developer versions of DateClick</TD></TR>
+  <TR>
+    <TD vAlign=top>FIELD<BR><STRONG>REQUIRED</STRONG></TD>
+    <TD vAlign=top width=70>(no default)</TD>
+    <TD vAlign=top>This value must always be explicitly 
+      set.&nbsp; FIELD must equal the full DOM path to the form field DateClick 
+      will populate with the selected value.&nbsp; The path will always be 
+      preceded by 'document', then the name of the form, then the name of the 
+      field.<BR><BR><EM>e.g. FIELD:document.forms[0].txtEndDate;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>FORMAT</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>Sets the format of the returned 
+      date.&nbsp; Note that in the Pro and Developer versions, this setting is 
+      overridden by what is set in 
+      MASK!<BR>0 =  mm/dd/yyyy<BR>1 =              dd/mm/yyyy<BR>2 = 
+      yyyy/mm/dd<BR><BR><EM>e.g. FORMAT:1;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>DELIMITER</TD>
+    <TD vAlign=top width=70>/</TD>
+    <TD vAlign=top>Sets the delimiter between month day 
+      and year.&nbsp; This allows for date formats such as dd.mm.yyyy and 
+      yyyy-mm-dd. Note that in the Pro and Developer versions, this setting is 
+      overridden by what is set in MASK!<BR>      
+                 
+      <BR><BR><EM>e.g. DELIMITER:-;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>HIDELISTBOXES</TD>
+    <TD vAlign=top width=70>false</TD>
+    <TD vAlign=top>       
+                   
+                  
+    Obsolete--this is included for backward compatibility.&nbsp; &nbsp;
+    <BR><BR><EM>e.g. HIDELISTBOXES:true;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=3>Options available only in Pro and Developer</TD></TR>
+  <TR>
+    <TD vAlign=top>MASK</TD>
+    <TD vAlign=top width=70><i>null</i></TD>
+    <TD vAlign=top>
+		<i>New in version 1.3!</i><br>
+		The MASK variable gives the ultimate flexibility in populating the selected
+		date back to your input field.  Using a string that you construct you can
+		dictate the exact format that will be passed to your form field.  For example,
+		passing the string MASK:DDDD, MMMM d, YYYY would yield Friday, May 26, 2005.
+		The available options are as follows:
+		<table border="0">
+			<tr>
+				<td>D</td>
+				<td>1-2 Digit Date</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>Date with suffix</td>
+			</tr>
+			<tr>
+				<td>DD</td>
+				<td>2 Digit Date</td>
+			</tr>
+			<tr>
+				<td>DDD</td>
+				<td>First three letters of day</td>
+			</tr>
+			<tr>
+				<td>DDDD</td>
+				<td>Full day name</td>
+			</tr>
+			<tr>
+				<td>M</td>
+				<td>1-2 Digit Month</td>
+			</tr>
+			<tr>
+				<td>MM</td>
+				<td>Two Digit Month</td>
+			</tr>
+			<tr>
+				<td>MMM</td>
+				<td>First three letters of Month</td>
+			</tr>
+			<tr>
+				<td>MMMM</td>
+				<td>Full month name</td>
+			</tr>
+			<tr>
+				<td>YY</td>
+				<td>Two digit year</td>
+			</tr>
+			<tr>
+				<td>YYYY</td>
+				<td>Four Digit Year</td>
+			</tr>
+		</table>
+		<br><br>
+		Note that the full and partial month and day names are based on
+		the FullDayNames and FullMonthNames array--which is completely
+		configurable!  Not all date formats can be correctly
+        read back into DateClick when setting the default date.  This 
+        mostly includes dates that have month or day name literals in them,
+        such as August instead of 08.
+		
+		Also note that this feature <b>overrides</b> the FORMAT, ZEROS,
+		and DELIMITER options on the Pro and Developer versions.
+    <BR><BR><EM>e.g. MASK:DD/MM/YYYY;</EM></TD></TR>
+  <TR>
+  <TR>
+    <TD vAlign=top>ZEROS</TD>
+    <TD vAlign=top width=70>true</TD>
+    <TD vAlign=top>If set to true, months and days that 
+      are less than 10 will be preceded by a zero, so a date of 5/8/1979 would 
+      look like 05/08/1979. Note that this setting is overridden by what is set 
+      in MASK!<BR>        
+                      
+        <BR><BR><EM>e.g. ZEROS:false;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>MOUSEOVER</TD>
+    <TD vAlign=top width=70>false</TD>
+    <TD vAlign=top>If set to true, the calendar will pop 
+      up when the mouse moves over it.&nbsp; If set to false, the DateClick icon 
+      needs to be clicked to activate.<BR><BR><EM>e.g. 
+  MOUSEOVER:false;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>SHOWDAYS</TD>
+    <TD vAlign=top width=70>true</TD>
+    <TD vAlign=top>Set to true by default, you can set 
+      this to false to hide the header row that shows the days.&nbsp; The days 
+      are usually displayed as S, M, T, etc. but can be set to show Sun, Mon, 
+      Tue, etc. by modifying the ary_days array property.<BR><BR><EM>e.g. 
+      SHOWDAYS:false;</EM></TD></TR>
+  <TR>
+    <TD vAlign=top>DELAY</TD>
+    <TD vAlign=top width=70>2000</TD>
+    <TD vAlign=top>
+      <P>Amount of time in milliseconds before a calendar becomes hidden again 
+      after a pop-up. A value of 2000 keeps a calendar visible for two seconds 
+      after the mouse leaves the calendar area.</P>
+      <P><EM>e.g. DELAY:5000;</EM> (5 second delay)</P></TD></TR>
+  <TR>
+    <TD vAlign=top>BEGINONMONDAY</TD>
+    <TD vAlign=top width=70>false</TD>
+    <TD vAlign=top>
+      <P>The default DateClick calendar displays with Sunday being the first day 
+      of the week.&nbsp; By setting this to 'true' the day sequence will go M, 
+      T, W, T, F, S, S (with Saturday and Sunday at the end of the week).</P>
+      <P><EM>e.g. BEGINONMONDAY:true;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>ICONLEFT</TD>
+    <TD vAlign=top width=70>null</TD>
+    <TD vAlign=top>
+      <P>By default, DateClick is positioned on your web page relatively based 
+      on where in the code you call the write_calendar method.&nbsp; You can 
+      also use absolute positioning in supported browsers by specifying the 
+      ICONLEFT and/or ICONTOP properties.&nbsp; The size should be in pixels and 
+      denotes the amount of pixels from the left side of the screen the 
+      DateClick icon should appear.</P>
+      <P><EM>e.g. ICONLEFT:40;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>ICONTOP</TD>
+    <TD vAlign=top width=70>null</TD>
+    <TD vAlign=top>
+      <P>Same as above, but specifies the distance in pixels from the top of the 
+      page.</P>
+      <P><EM>e.g. ICONTOP:20;</EM></P></TD></TR>
+  <TR>
+  <TR>
+    <TD vAlign=top>MOVEMODE</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+      <P>Tells DateClick whether the DHTML calendar can be moved by dragging it
+      with the mouse.  The default setting is 0 which means it can not be moved.
+      Setting this to 1 will allow the user to move the calendar at their will.
+      A setting of 2 is similar to 1, but if the calendar goes away and is invoked
+      again its position will be reset to where the calendar icon is.</P>
+      <P><EM>e.g. MOVEMODE:2;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>MONTH</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+      <P>Controls how the <b>month flyout</b> is shown.  The default 0 does not
+      allow the month selection flyout to appear.  If set to 1, the flyout will
+      appear when the month in the title is clicked.  If set to 2, the flyout
+      will appear when the mouse moves over the month.</P>
+      <P><EM>e.g. MONTH:2;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>YEAR</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+      <P>Controls how the <b>year flyout</b> is shown.  The default 0 does not
+      allow the year selection flyout to appear.  If set to 1, the flyout will
+      appear when the year in the title is clicked.  If set to 2, the flyout
+      will appear when the mouse moves over the year.</P>
+      <P><EM>e.g. YEAR:1;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>HIDELISTBOXES</TD>
+    <TD vAlign=top width=70>false</TD>
+    <TD vAlign=top>
+      <P>One of the unfortunate side effects of the way browsers handle select
+      and drop down lists is that they will always be rendered by the page on top
+      of any DHTML elements.  This means if they are in the same area as the
+      DateClick calendar, they will show through.  If this is likely to occur on
+      your page, set HIDELISTBOXES to true.  DateClick will detect any list boxes
+      on the page and make them temporarily invisible.</P>
+      <P><EM>e.g. HIDELISTBOXES:true;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>SHADOW</TD>
+    <TD vAlign=top width=70>false</TD>
+    <TD vAlign=top>
+      <P>When set to true, applies a drop shadow to the calendar on compatible
+      browsers (IE only at this time).</P>
+      <P><EM>e.g. SHADOW:true;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>CLOSE</TD>
+    <TD vAlign=top width=70>true</TD>
+    <TD vAlign=top>
+      <P>When set to false, the calendar will not close when a date is selected.</P>
+      <P><EM>e.g. CLOSE:false;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>INVALID</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+      <P>By default, dates in the past can be selected.  Set INVALID to 1 and today
+      and anything after today can be selected.  Set to 2 and the first valid day
+      begins tomorrow.</P>
+      <P><EM>e.g. INVALID:1;</EM></P></TD></TR>
+  <TR>
+    <TD vAlign=top>DIR</TD>
+    <TD vAlign=top width=70>basic</TD>
+    <TD vAlign=top>Probably the most powerful setting in 
+      DateClick's configuration.&nbsp; By specifying a DIR parameter, you set a 
+      specific class prefix and image directory upon which to base the 
+      appearance of DateClick's icon and calendar pop-up.&nbsp; The main purpose 
+      of this is to allow you to customize DateClick's appearance and to allow 
+      multiple DateClick calendars on each screen all with a different look. By 
+      setting this to a setting other than basic, you can create a whole new CSS 
+      class structure prefixed by the chosen word that completely alters the 
+      appearance.&nbsp; Also create a subdirectory with the name of your setting 
+      and place the calendar icon and supplemental images within 
+  it.</TD></TR>
+  <TR>
+    <TD vAlign=top>STATIC</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+		Set this to 1 to set the popup calendar to "static" mode--that is 
+		DateClick always shows on the page without having to click a calendar
+		icon to bring it up.
+		<P><EM>e.g. STATIC:1;</EM></P>
+  </TD></TR>
+  <TR>
+    <TD vAlign=top>FUNCTION</TD>
+    <TD vAlign=top width=70></TD>
+    <TD vAlign=top>
+		Pass the name of a function with this parameter that will be called
+		when a date is selected.  Don't include the ()'s in this declaration.
+		You must then define the function with one argument--this argument
+		will be a Date object set to the selected date.  If a FIELD is passed
+		as well as function, both the field will be set and the function will
+		be called.
+		<P><EM>e.g. FUNCTION:showDate;</EM></P>
+  </TD></TR>
+  <TR>
+    <TD vAlign=top>POSITION</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+		Determines how the popup calendar will be positioned when it appears
+        in non-static mode.
+        <UL>
+			<LI>0 - Default, calendar appears at the point of the mouse click.
+            <LI>1 - Calendar appears at the location of the calendar icon.
+            <LI>2 - Manual position.  Starts at the top left and can be offset
+            	by X and Y parameters.
+        </UL>
+		<P><EM>e.g. POSITION:2;</EM></P>
+  </TD></TR>
+  <TR>
+    <TD vAlign=top>X and Y</TD>
+    <TD vAlign=top width=70>0</TD>
+    <TD vAlign=top>
+		Specifying X and Y in the configuration string will offset the popup calendar's
+        screen position horizontally, with the X parameter, and vertically with the Y
+        parameter.  For example, if your POSITION parameter is set to 1, and the X is
+        set to 10 and the Y is set to 15, the string would look like POSITION:1;X:10;Y:15;
+        and the result would be that when the calendar pops up, its location will be
+        10 pixels to the right and 15 pixels down from the location of the icon image.
+        The position can also be moved up or to the left by specifying negative values.
+		<P><EM>e.g. X:200;</EM></P>
+  </TD></TR>
+  <TR>
+    <TD vAlign=top>TOOLTIP</TD>
+    <TD vAlign=top width=70></TD>
+    <TD vAlign=top>
+		Pass text to the tooltip parameter to replace the default "Click here..."
+		message that shows when the mouse hovers over the DateClick calendar icon.
+		<P><EM>e.g. TOOLTIP:Click here to display a popup calendar;</EM></P>
+  </TD></TR>
+  
+  </TABLE></P>
+<P>&nbsp;</P>
+<P><FONT face=Verdana size=1><a name="files"><STRONG>Files Included with 
+DateClick</STRONG></a></FONT></P>
+<P><FONT face=Verdana><FONT size=1>There are a number of 
+files included in the DateClick package.&nbsp; These may 
+include:</FONT></FONT></FONT></P>
+<P><TABLE id="Table2" cellSpacing=1 cellPadding=3 width="80%" align=center 
+  border=1>
+	<tr>
+		<td vAlign=top>calendar.css</td>
+		<td vAlign=top>The CSS source file defining the class styles for 
+      each element of the DateClick calendar and icon.</td>
+	</tr>
+  <TR>
+    <TD vAlign=top>choosedate.htm</TD>
+    <TD vAlign=top>The DateClick user's manual.</TD></TR>
+  <TR>
+    <TD vAlign=top>choosedate.js</TD>
+    <TD vAlign=top>The actual JavaScript source file that needs to be included in any 
+      page that references DateClick.</TD></TR>
+  <TR>
+    <TD vAlign=top>index.htm</TD>
+    <TD vAlign=top>An example page that shows how to set DateClick up with a few 
+      different settings.</TD></TR>
+  <TR>
+    <TD vAlign=top>faq.htm</TD>
+    <TD vAlign=top>Answers to some frequently asked questions.</TD></TR>
+  <TR>
+    <TD vAlign=top>\basic</TD>
+    <TD vAlign=top>The subdirectory containing the default image files that DateClick 
+      relies upon for its appearance.</TD></TR>
+  </TABLE>
+</P>
+<P>&nbsp;</P>
+<P><FONT face=Verdana size=1><a name="classes"><STRONG>List of CSS 
+Classes</STRONG></a></FONT></P>
+<P><FONT face=Verdana size=1>DateClick relies on a number of CSS classes to 
+determine its appearance as it is displayed on the page.&nbsp; By setting the 
+DIR parameter in the configuration string and preceding your class names with 
+the value specified, you can include any number of DateClick calendars on your 
+page with any different settings.&nbsp; The classes that are used to determine 
+the look of DateClick are listed below:</FONT></P>
+<P>
+<TABLE id=Table3 cellSpacing=1 cellPadding=3 width="80%" align=center 
+  border=1>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-header</TD>
+    <TD vAlign=top>The display settings for the month and year text in the 
+      header of the calendar.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-on-month</TD>
+    <TD vAlign=top>Style of the dates that are in the 
+      currently selected month.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-on-month-lit</TD>
+    <TD vAlign=top>Style of a date when the mouse is over 
+      it.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-off-month</TD>
+    <TD vAlign=top>Dates that are visible in the calendar 
+      but not in the currently selected month.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-off-month-lit</TD>
+    <TD vAlign=top>Same as above with mouse over.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-body</TD>
+    <TD vAlign=top>Style of the main calendar body.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-year</TD>
+    <TD vAlign=top>Style for each year in the year 
+      fly-out.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-year-lit</TD>
+    <TD vAlign=top>Same as above with mouse over.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-day</TD>
+    <TD vAlign=top>Format of each of the days&nbsp;in the 
+      day header row.</TD></TR>
+  <TR>
+    <TD vAlign=top width=131>basic-cl-days</TD>
+    <TD vAlign=top>Format for the day header 
+  row.</TD></TR></TABLE></P>
+<P>&nbsp;</P> 
+<br><br><br><div class="copyright">
+<img src="images/primorisfooter.jpg" align="left" hspace="20">
+The content and program code (material) on this page and throughout this package are copyright ©
+Primoris Software, all rights reserved.  You must use this material according to the
+included license agreement.  Redistribution and modification of this material is
+strictly prohibited.  The Primoris logo is a trademark of Primoris Software.
+</div>
+	</body>
+</html>

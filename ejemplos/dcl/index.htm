@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Primoris Software DateClick Overview</title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<script language="javascript" src="choosedate.js"></script>
+<link type="text/css" rel="stylesheet" href="calendar.css">
+<style>
+	BODY, TD, P {
+		font-family: Verdana;
+		font-size: 8pt;
+	}
+	PRE {
+		font-family: Courier New;
+		font-size: 8pt;
+	}
+</style>
+</head>
+<body bgcolor="white" background=images/primebackground.jpg bgproperties=fixed>
+<div align="center"><img src="images/dateclicklogo.jpg"></div>
+<div align="center" class="subdued">
+<a class="links" href="index.htm">Overview</a> | 
+<a class="links" href="choosedate.htm">Manual</a> |
+<a class="links" href="faqs.htm">FAQ</a> |
+<a class="links" href="http://www.primorissoftware.com">Primoris</a>
+&nbsp;
+</div>
+<P>The following examples show some "cut and paste" blocks of code that can be
+added to the HTML source of your web pages to include the DateClick popup
+calendar.  Before including the example code, be sure to add a reference
+to the DateClick CSS and Javascript files in the &lt;HEAD&gt; section like so:</P>
+<pre>
+&lt;script language="javascript" src="choosedate.js"&gt;&lt;/script&gt;
+&lt;link type="text/css" rel="stylesheet" href="calendar.css"&gt;
+</Pre>
+<br><br>
+<form name="frm" ID="Form1">
+<table>
+	<tr>
+		<td width="140" valign="top">
+		<i>Beginning Date</i><br>
+		<input type="text" name="datBegin" size="10" ID="datBegin">
+		&nbsp;
+		<script language=javascript>
+			var basicCal = new calendar("FIELD:document.frm.datBegin;");
+			basicCal.writeCalendar();
+		</script>
+		</td>
+		<td valign="top">
+			<b>Standard Calendar-No Options</b>
+			<p>
+				This basic calendar example shows a bare minimum script block
+				to get DateClick on the page.  The input field to the left is
+				called datBegin.   DateClick must be notified as part of the
+				configuration string that this is the field you want it to
+				populate when a date is clicked.  The code needed for this is
+				shown here.  If you already have an existing &lt;FORM&gt; in
+				your page, remove the FORM lines below before loading the page,
+				and change the name of the field from document.frm.datBegin to
+				reflect the name of your form (e.g. document.YourForm.datBegin).
+				Remember, FORM tags can not be nested. 
+			</P>
+			<pre>
+&lt;form name="frm"&gt;
+&lt;input type="text" name="datBegin" size="10"&gt;
+&amp;nbsp;
+&lt;script language=javascript&gt;
+	var basicCal = new calendar("FIELD:document.frm.datBegin");
+	basicCal.writeCalendar();
+&lt;/script&gt;
+&lt;/form&gt;
+			</pre>
+		</td>
+	</tr>
+	<tr>
+		<td width="140" valign="top">
+			<i>Ending date:</i><br>
+			<input type="text" name="datEnd" size="10">&nbsp;
+			<script language=javascript>
+				var basicCal2 = new calendar("FIELD:document.frm.datEnd;FORMAT:1;DELIMITER:-;");
+				basicCal2.writeCalendar();
+			</script>
+		</td>
+		<td valign="top">
+			<b>Standard Calendar-Alternate Date Format</b>
+			<p>
+			The Basic version of the calendar can be set to accept two alternate
+			date formats other than the default mm/dd/yyyy most commonly used in
+			the US.  By setting the FORMAT key in the configuration string as shown
+			below, you can specify a 1 for dd/mm/yyyy or a 2 for yyyy/mm/dd (default
+			is 0).  Also notice that this calendar object must be named differently
+			to distinguish it from the example above.  The DELIMITER option is also
+			passed to give the format a dd-mm-yyyy look.
+			</p>
+			<pre>
+&lt;form name="frm"&gt;
+&lt;input type="text" name="datEnd" size="10"&gt;
+&amp;nbsp;
+&lt;script language=javascript&gt;
+	var basicCal2 = new calendar("FIELD:document.frm.datEnd;FORMAT:1;DELIMITER:-;");
+	basicCal2.writeCalendar();
+&lt;/script&gt;
+&lt;/form&gt;
+			</pre>
+		</td>
+	</tr>
+	<tr>
+		<td width="140" valign="top">
+			<img src="images/cal1.gif" hspace="35">
+		</td>
+		<td valign="top">
+			<b>New In Standard--Different Languages</b>
+			<p>
+				The months and days of DateClick are completely
+				configurable.  Rather than the default Jan, you could configure each
+				month's name to be the complete word, e.g. January.  Or "Janvier" for
+				that matter.  This is done by modifying the Month and Day name
+				arrays before writing the calendar.  This calendar string also sets
+				the date format to dd/mm/yyyy, the delimiter to '-' (thus making the
+				date format dd-mm-yyyy), and hides leading zeros.  The latter two options
+				are Pro/Developer version only.
+			</p>
+			<pre>
+&lt;form name="frm"&gt;
+&lt;input type="text" name="datDOB" size="10"&gt;
+&amp;nbsp;
+&lt;script language=javascript&gt;
+	var proDOB = new calendar("FIELD:document.frm.datDOB;ZEROS:false;" +
+		"DELIMITER:-;FORMAT:1;DIR:primoris;");
+	proDOB.aryMonths = Array("Janvier", "Février", "Mars", "Avril", 
+		"Peut", "Juin", "Juillet", "Août", "Septembre", "Octobre", 
+		"Novembre", "Décembre");
+	proDOB.aryDays = Array("Sonntag", "Montag", "Dienstag", "Mittwoch", 
+		"Donnerstag", "Freitag", "Samstag");
+	proDOB.writeCalendar();
+&lt;/script&gt;
+&lt;/form&gt;
+			</pre>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><b>Additional Options for Pro and Developer Versions</b><br>
+		The above options are the only ones that can be set in the STANDARD version of
+		DateClick.  Below are some examples of some of the many other options that
+		are configurable in the PROFESSIONAL and DEVELOPMENT versions, available
+		for purchase from <a target="_blank" href="http://www.primorissoftware.com/purchase.asp">Primoris Software</a>.
+		</td>
+	</tr>
+</table><BR><br>
+<table>
+	<tr>
+		<td width="140" valign="top">
+			<img src="images/cal2.gif" hspace="35">
+		</td>
+		<td valign="top">
+			<b>Pro/Developer Versions-<I>Extreme</I> Options</b>
+			<p>
+				In addition to being licensed for commercial use, the Professional
+				and Developer versions of DateClick are highly configurable.  The
+				calendar can be moved when dragged with a mouse, it can stay
+				open after a date is clicked, the weeks can begin on Monday,
+				the calendar can cast a drop shadow in compatible browsers,
+				the year and month flyouts can be configured to appear on
+				a mouseover or not at all, and more!
+			</p>
+			<pre style="font-size:8pt;">
+&lt;form name="frm"&gt;
+&lt;input type="text" name="datDeparture" size="10"&gt;
+&amp;nbsp;
+&lt;script language=javascript&gt;
+	var Departure = new calendar("FIELD:document.frm.datDeparture;DIR:primoris;" +
+		"MOUSEOVER:false;BEGINONMONDAY:true;SHADOW:true;CLOSE:false;MOVEMODE:1;");
+	Departure.writeCalendar();
+&lt;/script&gt;
+&lt;/form&gt;
+			</pre>
+		</td>
+	</tr>
+</table>
+<br><br>
+<div class="copyright">
+<img src="images/primorisfooter.jpg" align="left" hspace="20">
+The content and program code (material) on this page and throughout this package are copyright &copy;
+Primoris Software, all rights reserved.  You must use this material according to the
+included license agreement.  Redistribution and modification of this material is
+strictly prohibited.  The Primoris logo is a trademark of Primoris Software.
+</div>
+</form>
+</body>
+</html>

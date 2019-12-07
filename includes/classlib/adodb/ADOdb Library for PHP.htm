@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>ADOdb Library for PHP</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+<body>
+<h1>ADOdb Library for PHP Manual </h1>
+V4.96 Sept 2007 (c) 2000-2007 John Lim (jlim#natsoft.com) 
+<font size="1"><p>Thanks to Gy&otilde;rv&aacute;ri 'Scr34m' G&aacute;bor (scr34m#frontember.hu) 
+  for html splitting and conversion to chm.</p>
+<p>This software is dual licensed using BSD-Style and LGPL. Where there is any 
+  discrepancy, the BSD-Style license will take precedence. This means you can 
+  use it in proprietary and commercial products.</p></font>
+	<p>Useful ADOdb links:  <a href="http://adodb.sourceforge.net/#download">Download</a> &nbsp; <a href="http://adodb.sourceforge.net/#docs">Other Docs</a>
+</p><p>
+
+This document covers the core ADOdb functions. ADOdb has many other modules
+which are documented elsewhere: <br>
+</p><blockquote>
+ - <a href="http://phplens.com/lens/adodb/docs-datadict.htm">Data Dictionary</a><br>
+ - <a href="http://phplens.com/lens/adodb/docs-session.htm">Database-backed Sessions</a><br>
+ - <a href="http://phplens.com/lens/adodb/docs-perf.htm">Database Performance Monitoring</a>.
+ </blockquote>
+<hr>
+<h3>Table of Contents</h3>
+<ul>
+  <li><a href="introduction.html">Introduction</a></li>
+  <li> <a href="unique.features.html">Unique Features of ADOdb</a></li>
+  <li> <a href="how.people.are.using.adodb.html">How People are using ADOdb</a></li>
+  <li> <a href="feature.requests.and.bug.reports.html">Feature Requests and Bug 
+    Reports</a></li>
+  <li> <a href="installation.guide.html">Installation Guide</a></li>
+  <li> <a href="installation.guide.html#mininstall">Minimal Install</a></li>
+  <li> <a href="code.initialization.html#init">Code Initialization and Connecting to Databases</a></li>
+   <ul>
+   <li> <a href="code.initialization.html#dsnsupport">Data Source Names</a></li>
+   <li> <a href="code.initialization.html#connect_ex">Connection Examples</a></li>
+   </ul>
+   <li> <a href="code.initialization.html#speed">High Speed ADOdb - tuning tips</a></li>
+   <li> <a href="code.initialization.html#hack">Hacking and Modifying ADOdb Safely</a></li>
+   <li><a href="code.initialization.html#php5">PHP5 Features</a> <ul><li>
+	<font size="2"><a href="code.initialization.html#php5iterators">foreach iterators</a></font></li><li><font size="2"> <a href="code.initialization.html#php5exceptions">exceptions</a></font></li></ul>
+	</li>
+ <li> <a href="supported.databases.html">Supported Databases</a></li>
+  <li> <a href="tutorial.html">Tutorials</a> 
+    <ul>
+      <li> <a href="tutorial.select.html">Select Statement</a></li>
+      <li> <a href="tutorial.advanced.select.with.field.objects.html">Advanced 
+        Select with Field Objects</a></li>
+      <li> <a href="tutorial.inserting.html">Inserting</a></li>
+      <li> <a href="tutorial.debugging.html">Debugging</a></li>
+      <li> <a href="tutorial.mysql.and.menus.html">MySQL and Menus</a></li>
+      <li> <a href="tutorial.connecting.to.multiple.databases.html">Connecting 
+        to Multiple Databases at once </a></li>
+      <li><a href="tutorial.generating.update.and.insert.sql.html">Generating 
+        Update and Insert SQL </a></li>
+      <li><a href="tutorial.implementing.scrolling.with.next.and.previous.html">Implementing 
+        Scrolling with Next and Previous</a></li>
+      <li> <a href="tutorial.exporting.in.csv.or.tab.delimited.format.html">Exporting 
+        in CSV or Tab-Delimited Format </a></li>
+      <li><a href="tutorial.recordset.filters.html">Recordset Filters</a></li>
+      <li><a href="tutorial.smart.transactions.html">Smart Transactions</a></li>
+    </ul>
+  </li>
+  <li><a href="using.custom.error.handlers.and.pear_error.html">Using Custom Error 
+    Handlers and PEAR_Error</a></li>
+  <li><a href="data.source.names.html"> Data Source Names</a></li>
+  <li> <a href="caching.of.recordsets.html">Caching of Recordsets</a></li>
+  <li> <a href="pivot.tables.html">Pivot Tables</a></li>
+  <li><a href="reference.html">Class Reference</a> 
+    <ul>
+      <li> Variables: 
+        <ul>
+          <li><a href="reference.varibles.adodb_lang.html#adodb_ansi_padding_off">$ADODB_ANSI_PADDING_OFF</a></li>
+          <li><a href="reference.varibles.adodb_countrecs.html">$ADODB_COUNTRECS</a></li>
+          <li><a href="reference.varibles.adodb_cache_dir.html">$ADODB_CACHE_DIR</a></li>
+          <li><a href="reference.varibles.adodb_fetch_mode.html">$ADODB_FETCH_MODE 
+          </a></li><li><a href="tutorial.generating.update.and.insert.sql.html#ADODB_FORCE_TYPE">$ADODB_FORCE_TYPE</a>
+		  </li><li><a href="reference.varibles.adodb_lang.html">$ADODB_LANG</a></li>
+            
+        </ul>
+      </li>
+      <li>Constants: 
+        <ul>
+          <li><a href="reference.constants.adodb_assoc_case.html">ADODB_ASSOC_CASE 
+            </a></li>
+        </ul>
+      </li>
+      <li> <a href="reference.functions.adoconnection.html"><strong>ADOConnection</strong> </a>
+        <ul>
+          <li><strong>Connection</strong></li>
+        </ul>
+      </li>
+      <ul>
+        <li><a href="reference.functions.connect.html">Connect</a></li>
+        <li><a href="reference.functions.pconnect.html">PConnect</a></li>
+        <li><a href="reference.functions.nconnect.html">NConnect</a> </li>
+		<li><a href="reference.functions.nconnect.html#isconnected">IsConnected</a> </li>
+        <li><strong>Executing SQL</strong></li>
+        <li><a href="reference.functions.execute.html">Execute</a></li>
+        <li><a href="reference.functions.cacheexecute.html">CacheExecute</a></li>
+        <li><a href="reference.functions.executecursor.html">ExecuteCursor (oci8 
+          only)</a></li>
+        <li><a href="reference.functions.selectlimit.html">SelectLimit</a></li>
+        <li><a href="reference.functions.cacheselectlimite.html">CacheSelectLimit</a></li>
+        <li><a href="reference.functions.cacheflush.html">CacheFlush</a></li>
+        <li><a href="reference.functions.prepare.html">Prepare</a></li>
+        <li><a href="reference.functions.preparesp.html">PrepareSP</a></li>
+		 <li><a href="reference.functions.parameter.html">InParameter</a></li>
+		  <li><a href="reference.functions.parameter.html">OutParameter</a></li>
+        <li><a href="reference.functions.parameter.html#param">Param</a></li>
+        <li><a href="reference.functions.getone.html">GetOne</a></li>
+        <li><a href="reference.functions.cachegetone.html">CacheGetOne</a></li>
+        <li><a href="reference.functions.getone.html#getassoc1">GetAssoc</a></li>
+        <li><a href="reference.functions.getone.html#cachegetassoc">CacheGetAssoc</a></li>
+        <li><a href="reference.functions.getrow.html">GetRow</a></li>
+        <li><a href="reference.functions.cachegetrow.html">CacheGetRow</a></li>
+        <li><a href="reference.functions.getall.html">GetAll</a></li>
+        <li><a href="reference.functions.cachegetall.html">CacheGetAll</a></li>
+        <li><a href="reference.functions.getcol.html">GetCol</a></li>
+        <li><a href="reference.functions.cachegetcol.html">CacheGetCol</a></li>
+        <li><a href="reference.functions.replace.html">Replace</a> </li>
+		<li> <a href="reference.functions.getupdatesql.html#autoexecute">AutoExecute</a></li>
+        <li><strong>Generates SQL</strong></li>
+        <li> <a href="reference.functions.getupdatesql.html#getupdatesql">GetUpdateSQL</a></li>
+        <li><a href="reference.functions.getinsertsql.html">GetInsertSQL</a></li>
+        <li><strong>Blob/Clob Handling</strong></li>
+        <li><a href="reference.functions.updateblob.html">UpdateBlob</a></li>
+        <li><a href="reference.functions.updateclob.html">UpdateClob</a></li>
+        <li><a href="reference.functions.updateblobfile.html">UpdateBlobFile</a></li>
+        <li><a href="reference.functions.blobencode.html">BlobEncode</a></li>
+        <li><a href="reference.functions.blobdecode.html">BlobDecode</a></li>
+        <li><strong>Paging/Scrolling</strong></li>
+        <li><a href="reference.functions.pageexecute.html">PageExecute</a></li>
+        <li><a href="reference.functions.cachepageexecute.html">CachePageExecute</a></li>
+        <li><strong>CleanUp</strong></li>
+        <li> <a href="reference.functions.close.html">Close</a></li>
+        <li><a href="reference.functions.cacheflush.html">CacheFlush</a></li>
+        <li><strong>Transactions</strong></li>
+        <li> <a href="reference.functions.transactions.html#starttrans">StartTrans</a></li>
+        <li> <a href="reference.functions.transactions.html#completetrans">CompleteTrans</a></li>
+        <li> <a href="reference.functions.transactions.html#failtrans">FailTrans</a></li>
+        <li> <a href="reference.functions.transactions.html#hasfailedtrans">HasFailedTrans</a></li>
+        <li> <a href="reference.functions.transactions.html#SetTransactionMode">SetTransactionMode</a></li>
+		<li> <a href="reference.functions.begintrans.html">BeginTrans</a></li>
+        <li><a href="reference.functions.committrans.html">CommitTrans</a></li>
+        <li><a href="reference.functions.rollbacktrans.html">RollbackTrans</a> 
+        </li>
+        <li><a href="reference.functions.setfetchmode.html">SetFetchMode</a></li>
+        <li> <strong>String Manipulation</strong></li>
+        <li><a href="reference.functions.concat.html">Concat</a></li>
+		 <li><a href="reference.functions.concat.html#ifnull">IfNull</a></li>
+		 <li><a href="reference.functions.concat.html#length">length</a></li>
+       <li><a href="reference.functions.concat.html#substr">substr</a></li>
+        <li><a href="reference.functions.concat.html#random">random</a></li>
+		  <li><a href="reference.functions.qstr.html">qstr</a></li>
+        <li><a href="reference.functions.quote.html">quote</a></li>
+        <li><strong>Date Handling</strong></li>
+        <li> <a href="reference.functions.dbdate.html">DBDate</a></li>
+		
+        <li> <a href="reference.functions.dbdate.html#binddate">BindDate</a></li>
+        <li><a href="reference.functions.dbtimestamp.html">DBTimeStamp</a></li>
+		
+        <li><a href="reference.functions.dbtimestamp.html#bindtimestamp">BindTimeStamp</a></li>
+        <li><a href="reference.functions.unixdate.html">UnixDate</a></li>
+        <li><a href="reference.functions.unixtimestamp.html">UnixTimeStamp</a></li>
+        <li><a href="reference.functions.offsetdate.html">OffsetDate</a></li>
+        <li><a href="reference.functions.sqldate.html">SQLDate</a> </li>
+        <li><strong>Row Management</strong></li>
+        <li><a href="reference.functions.affected_rows.html">Affected_Rows</a></li>
+        <li><a href="reference.functions.insert_id.html">Insert_ID</a></li>
+        <li><a href="reference.functions.insert_id.html#rowlock">RowLock</a></li>
+        <li><strong>Sequences</strong></li>
+        <li><a href="reference.functions.genid.html">GenID</a></li>
+        <li><a href="reference.functions.createsequence.html">CreateSequence</a></li>
+        <li><a href="reference.functions.dropsequenced.html">DropSequence</a></li>
+        <li><strong>Error Handling </strong> </li>
+        <li><a href="reference.functions.errormsg.html">ErrorMsg</a></li>
+		<li><a href="reference.functions.errorno.html#errno">ErrorNo</a></li>
+		<li><a href="reference.functions.errorno.html#metaerror">MetaError</a></li>
+		<li><a href="reference.functions.errorno.html#metaerrmsg">MetaErrMsg</a></li>
+        <li><a href="reference.functions.errormsg.html#ignoreerrors">IgnoreErrors</a></li>
+        <li><strong>Data Dictionary</strong></li>
+        <li> <a href="reference.functions.metadatabases.html">MetaDatabases</a></li>
+        <li><a href="reference.functions.metatables.html">MetaTables</a></li>
+        <li><a href="reference.functions.metacolumns.html">MetaColumns</a></li>
+        <li><a href="reference.functions.metacolumnnames.html">MetaColumnNames</a></li>
+        <li><a href="reference.functions.metaprimarykeys.html">MetaPrimaryKeys 
+          and MetaForeignKeys</a></li>
+        <li><a href="reference.functions.serverinfo.html">ServerInfo</a></li>
+        <li><strong>Statistics and Query Rewriting</strong></li>
+        <li><a href="reference.functions.fnexecute.and.fncacheexecute.properties.html">LogSQL</a></li>
+        <li><a href="reference.functions.fnexecute.and.fncacheexecute.properties.html#fnExecute">fnExecute 
+          and fnCacheExecute</a></li>
+        <li><strong>Deprecated</strong></li>
+        <li><a href="reference.functions.bind.html">Bind</a></li>
+        <li><a href="reference.functions.blankrecordset.html">BlankRecordSet</a></li>
+		
+        <li><a href="reference.functions.parameter.html">Parameter</a></li>
+      </ul>
+      <li><a href="reference.functions.adorecordset.html"><strong>ADORecordSet</strong></a> 
+	  
+        <ul>
+			
+          <li><strong>Returns one row</strong></li>
+          <li><a href="reference.functions.fetchrow.html">FetchRow</a></li>
+          <li><a href="reference.functions.fetchinto.html">FetchInto</a></li>
+          <li><a href="reference.functions.fetchobject.html">FetchObject</a></li>
+          <li><a href="reference.functions.fetchnextobjects.html">FetchNextObject</a></li>
+          <li><a href="reference.functions.fetchobj.html">FetchObj</a></li>
+          <li><a href="reference.functions.fetchnextobj.html">FetchNextObj</a></li>
+          <li><strong>Returns all rows</strong></li>
+          <li><a href="reference.functions.getarray.html">GetArray</a></li>
+          <li><a href="reference.functions.getrows.html">GetRows</a></li>
+          <li><a href="reference.functions.getassoc.html">GetAssoc</a></li>
+          <li><strong>Scrolling</strong></li>
+          <li><a href="reference.functions.move.html">Move</a></li>
+          <li><a href="reference.functions.movenext.html">MoveNext</a></li>
+          <li><a href="reference.functions.movefirst.html">MoveFirst</a></li>
+          <li><a href="reference.functions.movelast.html">MoveLast</a></li>
+          <li><a href="reference.functions.absoluteposition.html">AbsolutePosition</a></li>
+          <li><a href="reference.functions.cachegetrow.html">CurrentRow</a></li>
+          <li><a href="reference.functions.atfirstpage.html">AtFirstPage</a></li>
+          <li><a href="reference.functions.atlastpage.html">AtLastPage</a></li>
+          <li><a href="reference.functions.absolutepage.html">AbsolutePage</a></li>
+          <li><strong>Menu generation</strong></li>
+          <li><a href="reference.functions.getmenu.html">GetMenu</a></li>
+          <li><a href="reference.functions.getmenu2.html">GetMenu2</a></li>
+          <li><strong>Dates</strong></li>
+          <li><a href="reference.functions.userdate.html">UserDate</a></li>
+          <li><a href="reference.functions.usertimestamp.html">UserTimeStamp</a></li>
+          <li><strong>Recordset info</strong></li>
+          <li><a href="reference.functions.recordcount.html">RecordCount</a></li>
+          <li><a href="reference.functions.po_recordcount.html">PO_RecordSet</a></li>
+          <li><a href="reference.functions.nextrecordset.html">NextRecordSet</a></li>
+          <li><strong>Field info</strong></li>
+          <li><a href="reference.functions.fieldcount.html">FieldCount</a></li>
+          <li><a href="reference.functions.fetchfield.html">FetchField</a></li>
+          <li><a href="reference.functions.metatype.html">MetaType</a></li>
+          <li><strong>Cleanup</strong></li>
+          <li><a href="reference.functions.close2.html">Close</a></li>
+          <li><strong>Deprecated</strong></li>
+          <li><a href="reference.functions.getrowassoc.html">GetRowAssoc</a></li>
+          <li><a href="reference.functions.fields.html">Fields</a> </li>
+        </ul>
+      </li>
+      <li><a href="functions.rs2html.html">rs2html</a></li>
+    </ul>
+  </li>
+  <li><a href="database.driver.guide.html">Database Driver Guide</a></li>
+  <li><a href="todo.html">ToDo</a></li>
+  <li><a href="change.log.html">Change Log</a></li>
+</ul>
+<br>
+<div align="center"><font size="2">Sponsored by <a href="http://phplens.com/?adodb_docs=1">phpLens</a></font></div>
+</body></html>

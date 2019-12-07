@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Popup Calendar</title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<script language="javascript" src="choosedate.js"></script>
+<script language="javascript">
+	function refreshPage(passBackVar){
+		document.location.href="dateclick.htm?selectedDate=" + passBackVar;
+	}
+</script>
+<link type="text/css" rel="stylesheet" href="calendar.css">
+<style>
+	BODY, TD, P {
+		font-family: Verdana;
+		font-size: 8pt;
+	}
+	PRE {
+		font-family: Courier New;
+		font-size: 8pt;
+	}
+</style>
+</head>
+<body bgcolor="white">
+<form name="frm">
+		<div style="width:600px;height:40px;">
+		<input type="text" name="datBegin" size="10" ID="datBegin">
+		<script language=javascript>
+			var basicCal = new calendar("FIELD:document.frm.datBegin;FUNCTION:refreshPage;MASK:MM/DD/YYYY;TOOLTIP:Click here to display a popup calendar.");
+			basicCal.writeCalendar();
+		</script>
+		</div>
+</form>
+</body>
+</html>

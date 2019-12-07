@@ -1,0 +1,6 @@
+http://66.128.53.140/phpmyadmin/
+http://66.128.53.140/inova_home/
+
+ftp://66.128.53.140/
+cesar
+cesar

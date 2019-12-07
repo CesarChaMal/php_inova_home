@@ -1,0 +1,131 @@
+.tableBorder{
+	border: 1.0px solid #CCCCCC;
+}
+.lineHorizontal{
+	border-bottom-width: 1.0px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+.lineVerticalA{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #006699;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #006699;
+}
+.lineVerticalD{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #006699;
+}
+.lineVerticalI{
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #006699;
+}
+.styleNBG{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #666666;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: italic;
+}
+.styleNBM{
+
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color:#333333;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	
+	}
+.styleContent{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#333333;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: capitalize;	
+	}
+.styleNBLM{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#003366;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;	
+	}
+.styleNBC{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#333333;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+}
+.boxText{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#003366;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+}
+.boxTextGrid{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#003366;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	border: 1.0px dashed #FFFFFF;
+}
+.btnText{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#000000;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #F5F5F5;
+	border: 1px solid #EFEFEF;
+}
+.styleMain{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.styleMain:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.styleCBX{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+.gridContent{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.gridContentMin{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+    text-align:center;
+	text-decoration: none;
+}

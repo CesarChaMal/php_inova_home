@@ -1,0 +1,63 @@
+BODY {
+	COLOR: black; FONT-FAMILY: arial, helvetica, sans-serif; BACKGROUND-COLOR: #e4e4e8
+}
+A:link {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #800080; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #800000; TEXT-DECORATION: underline
+}
+.monospace {
+	FONT-FAMILY: Courier, "Courier New", monospace
+}
+.invalid {
+	BACKGROUND-COLOR: #ffcccc
+}
+.box {
+	BORDER-RIGHT: #707078 1px solid; BORDER-TOP: #fcfcff 1px solid; BORDER-LEFT: #fcfcff 1px solid; BORDER-BOTTOM: #707078 1px solid; border-radius: 8px; moz-border-radius: 8px; webkit-border-radius: 8px
+}
+.rt {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-WEIGHT: bold; FONT-SIZE: larger; PADDING-BOTTOM: 6px; MARGIN-LEFT: 5%; WIDTH: 90%; PADDING-TOP: 6px; TEXT-ALIGN: left
+}
+.ro {
+	BORDER-RIGHT: #707078 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #fcfcff 1px solid; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; MARGIN-LEFT: 5%; BORDER-LEFT: #fcfcff 1px solid; WIDTH: 90%; PADDING-TOP: 8px; BORDER-BOTTOM: #707078 1px solid; BACKGROUND-COLOR: #dcdce0; TEXT-ALIGN: left; border-radius: 8px; moz-border-radius: 8px; webkit-border-radius: 8px
+}
+.re {
+	BORDER-RIGHT: #707078 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #fcfcff 1px solid; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; MARGIN-LEFT: 5%; BORDER-LEFT: #fcfcff 1px solid; WIDTH: 90%; PADDING-TOP: 8px; BORDER-BOTTOM: #707078 1px solid; BACKGROUND-COLOR: #d0d0d4; TEXT-ALIGN: left; border-radius: 8px; moz-border-radius: 8px; webkit-border-radius: 8px
+}
+.menu {
+	BORDER-RIGHT: #707078 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fcfcff 1px solid; PADDING-LEFT: 2px; FILTER: alpha(opacity=95); PADDING-BOTTOM: 2px; BORDER-LEFT: #fcfcff 1px solid; CURSOR: default; PADDING-TOP: 2px; BORDER-BOTTOM: #707078 1px solid; BACKGROUND-COLOR: #e4e4e8; opacity: 0.95
+}
+.pc {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; BACKGROUND-COLOR: #dcdce0; border-radius: 8px; moz-border-radius: 8px; webkit-border-radius: 8px
+}
+.pb {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; BACKGROUND-IMAGE: url(http://files.phpclasses.org/graphics/progress.gif); PADDING-BOTTOM: 4px; BORDER-TOP-STYLE: none; PADDING-TOP: 4px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: #0000ff; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+.nbld {
+	BORDER-RIGHT: #707078 2px solid; BORDER-TOP: 2px; BORDER-LEFT: #fcfcff 2px solid; BORDER-BOTTOM: #707078 2px solid; WHITE-SPACE: nowrap; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; moz-border-radius-bottomright: 8px; moz-border-radius-bottomleft: 8px; webkit-border-bottom-right-radius: 8px; webkit-border-bottom-left-radius: 8px
+}
+.nbtd {
+	BORDER-RIGHT: #707078 1px solid; BORDER-TOP: #707078 1px solid; BORDER-LEFT: #fcfcff 1px solid; BORDER-BOTTOM: #707078 1px solid; WHITE-SPACE: nowrap; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; moz-border-radius-bottomright: 8px; moz-border-radius-bottomleft: 8px; webkit-border-bottom-right-radius: 8px; webkit-border-bottom-left-radius: 8px
+}
+.nbgd {
+	BORDER-RIGHT: 1px; PADDING-RIGHT: 0px; BORDER-TOP: #707078 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: 1px; PADDING-TOP: 0px; BORDER-BOTTOM: 1px; WHITE-SPACE: nowrap
+}
+.nbpd {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.nblu {
+	BORDER-RIGHT: #707078 2px solid; BORDER-TOP: #fcfcff 2px solid; BORDER-LEFT: #fcfcff 2px solid; BORDER-BOTTOM: 2px; WHITE-SPACE: nowrap; border-top-left-radius: 8px; border-top-right-radius: 8px; moz-border-radius-topright: 8px; moz-border-radius-topleft: 8px; webkit-border-top-right-radius: 8px; webkit-border-top-left-radius: 8px
+}
+.nbtu {
+	BORDER-RIGHT: #707078 1px solid; BORDER-TOP: #fcfcff 1px solid; BORDER-LEFT: #fcfcff 1px solid; BORDER-BOTTOM: #fcfcff 1px solid; WHITE-SPACE: nowrap; border-top-left-radius: 8px; border-top-right-radius: 8px; moz-border-radius-topright: 8px; moz-border-radius-topleft: 8px; webkit-border-top-right-radius: 8px; webkit-border-top-left-radius: 8px
+}
+.nbgu {
+	BORDER-RIGHT: 1px; PADDING-RIGHT: 0px; BORDER-TOP: 1px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: 1px; PADDING-TOP: 0px; BORDER-BOTTOM: #fcfcff 1px solid; WHITE-SPACE: nowrap
+}
+.nbpu {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}

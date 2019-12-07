@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS `tbl_configuracion_ocupacional`;
+CREATE TABLE IF NOT EXISTS `tbl_configuracion_ocupacional` (
+  `idconfiguracion` int(11) NOT NULL auto_increment,
+  `fecha_inicio` date NOT NULL default '0000-00-00',
+  `fecha_fin` date NOT NULL default '0000-00-00',
+  `gateway` varchar(100) NOT NULL default '',
+  `minutos_disponibles` int(10) NOT NULL default '0',
+  `initialPort` int(4) NOT NULL,
+  `finalPort` int(4) NOT NULL default '0',
+  PRIMARY KEY  (`idconfiguracion`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
+
+--
+-- Volcar la base de datos para la tabla `tbl_configuracion_ocupacional`
+--
+
+INSERT INTO `tbl_configuracion_ocupacional` (`idconfiguracion`, `fecha_inicio`, `fecha_fin`, `gateway`, `minutos_disponibles`, `initialPort`, `finalPort`) VALUES
+(38, '2007-11-02', '2007-11-24', 'ofomerd', 1500, 0, 32),
+(39, '2007-11-02', '2007-11-24', 'ofomerd', 7000, 0, 32),
+(53, '2007-11-02', '2007-11-30', 'ofomerd', 5000, 0, 16);
